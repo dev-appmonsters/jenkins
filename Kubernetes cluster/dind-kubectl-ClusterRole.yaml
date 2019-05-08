@@ -1,0 +1,10 @@
+apiVersion: rbac.authorization.k8s.io/v1beta1
+kind: ClusterRole
+metadata:
+  name: system:serviceaccount:default:default
+rules:
+- apiGroups: [""]
+  resources: ["pods/portforward", "storageclasses", "jobs", "cronjobs", "serviceaccounts", "horizontalpodautoscalers", "resourcequotas", "persistentvolumes", "namespaces", "pods", "nodes", "services", "deployment", "configmap", "secrets", "persistentvolumeclaims", "replicationcontrollers", "ingress", "replicasets"]
+  verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
+
+
